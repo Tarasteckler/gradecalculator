@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Calculator</title>
+    <script src="gradecalc.js"></script>
+    <link rel="stylesheet" href="gradecalc.css">
+</head>
+
+<body>
+
+
+<header>
+    <h1>GRADE CALCULATOR</h1>
+    <h2>Want to find out what you need to get on your final to get the grade you want? Use the grade calculator below!</h2>
+</header>
+
+<table border=”1” cellspacing=”2” cellpadding=”5”>
+    <tr>
+        <td></td>
+        <td>Grades</td>
+        <td>Weight</td>
+    </tr>
+    <tr>
+        <td>Quizzes</td>
+        <td><input id="quizzes" type="text" placeholder="Grade 1, grade 2, ..." value="90,80,70"></td>
+        <td><input id="quizWeight" type="text" placeholder="'Quizzes' weight" value="25"></td>
+    </tr>
+    <tr>
+        <td>Tests</td>
+        <td><input id="tests" type="text" placeholder="Grade 1, grade 2, ..." value="90,80,70"></td>
+        <td><input id="testWeight" type="text" placeholder="'Tests' weight" value = "40"></td>
+    </tr>
+    <tr>
+        <td> Homework </td>
+        <td><input id="hw" type="text" placeholder="Grade 1, grade 2, ..." value = "80, 70, 75, 95"></td>
+        <td><input id="hwWeight" type="text" placeholder="'Homework' weight" value = "20"></td>
+    </tr>
+</table>
+<br>
+
+
+<h3>What percent is your final worth?</h3>
+
+<input id="finalWeight" type="text" placeholder="10, 15, 20..." value = "15"> <br> <br>
+<button onclick="calculateCurrentGrade()" >Calculate Current Grade</button> <br> <br>
+
+<div id="currentGrade"></div>
+
+<h3>What grade do you want in the class?</h3>
+<input id="desiredGrade" type="text" placeholder="80, 90, 100" value = "90"> <br> <br>
+
+
+
+<button onclick="calculateGradeNeeded()" >Calculate Final Exam Grade Needed</button> <br> <br>
+<div id="gradeNeeded"></div>
+
+</body>
+</html>
