@@ -7,9 +7,49 @@ input[type=text] {
 
 header{
     text-align: center;
+    padding: 20px;
 }
 
 #finalWeight, #desiredGrade{
-     width: 10%;
+    width: 10%;
+    font-family: monospace;
+
+}
+
+h1{
+    font-family: impact, serif;
+    color: black;
+    text-shadow: 4px 4px 8px white;
+    font-size: 300%;
+
+}
+
+h2, h3{
+    font-family: monospace, serif;
+    color: black;
+    text-align: center;
+}
+
+body{
+    background-color: darkolivegreen;
+    text-align: center;
+}
+
+td{
+    font-family: monospace;
+}
+
+button{
+    font-family: monospace;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
 
 }

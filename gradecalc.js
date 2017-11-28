@@ -23,7 +23,7 @@ function calculateCurrentGrade(){
     var currentGrade = ((quizWeightedAvg + testWeightedAvg + hwWeightedAvg)/
         (1- (document.getElementById("finalWeight").value)/100));
 
-    document.getElementById("currentGrade").innerHTML = "Your current grade is: " + currentGrade;
+    document.getElementById("currentGrade").innerHTML = "Your current grade is: " + currentGrade + "%.";
 
 }
 
@@ -53,11 +53,12 @@ function weightAvg(num,weight){
 
 
 function calculateGradeNeeded(){
-    document.getElementById("gradeNeeded").innerHTML = "You need to get: " + getGradeNeeded();
+    document.getElementById("gradeNeeded").innerHTML = "You need to get " + getGradeNeeded() + "% on your final to get a " +
+        document.getElementById("desiredGrade").value + "% in this class." ;
 
 }
 
-function getGradeNeeded(num){
+function getGradeNeeded(){
     var desiredGrade = parseInt(document.getElementById("desiredGrade").value);
     return (desiredGrade - (1- (document.getElementById("finalWeight").value)/100)) / (1 - (document.getElementById("finalWeight").value)/100);
 }
