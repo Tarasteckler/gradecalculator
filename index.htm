@@ -13,47 +13,48 @@
 <header>
     <h1>GRADE CALCULATOR</h1>
     <h2>Want to find out what you need to get on your final to get the grade you want? Use the grade calculator below!</h2>
+    <h3>Enter in a list of your grades in each of the categories below, separating individual grades with commas.</h3>
 </header>
-
-<table border=”1” cellspacing=”2” cellpadding=”5”>
+<table border=”1” cellspacing=”2” cellpadding=”15”>
     <tr>
         <td></td>
         <td>Grades</td>
         <td>Weight</td>
     </tr>
-    <tr>
+    <tr id="qRow">
         <td>Quizzes</td>
-        <td><input id="quizzes" type="text" placeholder="Grade 1, grade 2, ..." value="90,80,70"></td>
-        <td><input id="quizWeight" type="text" placeholder="'Quizzes' weight" value="25"></td>
+        <td><input id="quizzes" type="text" placeholder="Grade 1, grade 2, ..." value="90,99,100"></td>
+        <td><input id="quizWeight" type="text" placeholder="Quiz weight" value="25"></td>
     </tr>
-    <tr>
+    <tr id="tRow">
         <td>Tests</td>
         <td><input id="tests" type="text" placeholder="Grade 1, grade 2, ..." value="90,80,70"></td>
-        <td><input id="testWeight" type="text" placeholder="'Tests' weight" value = "40"></td>
+        <td><input id="testWeight" type="text" placeholder="Test weight" value = "40"></td>
     </tr>
-    <tr>
+    <tr id="hRow">
         <td> Homework </td>
-        <td><input id="hw" type="text" placeholder="Grade 1, grade 2, ..." value = "80, 70, 75, 95"></td>
-        <td><input id="hwWeight" type="text" placeholder="'Homework' weight" value = "20"></td>
+        <td><input id="hw" type="text" placeholder="Grade 1, grade 2, ..." value = "60, 70, 75, 95"></td>
+        <td><input id="hwWeight" type="text" placeholder="Homework weight" value = "20"></td>
     </tr>
 </table>
-<br>
-
 
 <h3>What percent is your final worth?</h3>
 
-<input id="finalWeight" type="text" placeholder="10, 15, 20..." value = "15"> <br> <br>
-<button onclick="calculateCurrentGrade()" >Calculate Current Grade</button> <br> <br>
+<input id="finalWeight" type="text" placeholder="10, 15, 20..." value="15" > <br> <br>
+<button id="current" onclick="validateInput()" >Calculate Current Grade</button> <br> <br>
 
 <div id="currentGrade"></div>
 
-<h3>What grade do you want in the class?</h3>
-<input id="desiredGrade" type="text" placeholder="80, 90, 100" value = "90"> <br> <br>
+<h3>What percent do you want in the class?</h3>
+<input id="desiredGrade" type="text" placeholder="80, 90, 100..." value="90"> <br> <br>
 
 
+<button id= "needed" onclick="validateFields()" >Calculate Final Exam Grade Needed</button> <br> <br>
+<div id="gradeNeeded"></div> <br>
 
-<button onclick="calculateGradeNeeded()" >Calculate Final Exam Grade Needed</button> <br> <br>
-<div id="gradeNeeded"></div>
+<button id= "reset" onclick="reset()">Calculate Another Grade</button>
+
+
 
 </body>
 </html>
